@@ -23,6 +23,9 @@
             <div class="column keys-check">
                 <span>Teclas</span><input type="checkbox" checked>
             </div>
+            <div class="column notes-check">
+                <span>Notas</span><input type="checkbox" unchecked>
+            </div>
         </div>
         <header>
             <ul class="piano-keys">
@@ -31,13 +34,13 @@
                 <li class="key white" data-key="s"><span>s</span></li>
                 <li class="key black" data-key="e"><span>e</span></li>
                 <li class="key white" data-key="d"><span>d</span></li>
-                <li class="key black" data-key="f"><span>f</span></li>
-                <li class="key white" data-key="t"><span>t</span></li>
-                <li class="key black" data-key="g"><span>g</span></li>
-                <li class="key white" data-key="y"><span>y</span></li>
-                <li class="key black" data-key="h"><span>h</span></li>
-                <li class="key white" data-key="u"><span>u</span></li>
-                <li class="key black" data-key="j"><span>j</span></li>
+                <li class="key white" data-key="f"><span>f</span></li>
+                <li class="key black" data-key="t"><span>t</span></li>
+                <li class="key white" data-key="g"><span>g</span></li>
+                <li class="key black" data-key="y"><span>y</span></li>
+                <li class="key white" data-key="h"><span>h</span></li>
+                <li class="key black" data-key="u"><span>u</span></li>
+                <li class="key white" data-key="j"><span>j</span></li>
                 <li class="key white" data-key="k"><span>k</span></li>
                 <li class="key black" data-key="o"><span>o</span></li>
                 <li class="key white" data-key="l"><span>l</span></li>
@@ -46,9 +49,15 @@
             </ul>
 
         </header>
+        <div class="exemplos">
+            
+            <button class="column ex1">Exemplo 1</button>
+            <button class="column ex2">Exemplo 2</button>
 
+        </div>
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/tone@^14.8.26"></script>
     <script src="./src/scripts/engine.js" defer></script>
 </body>
 </html>
