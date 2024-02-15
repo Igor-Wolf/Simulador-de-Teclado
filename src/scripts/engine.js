@@ -9,7 +9,7 @@ const player = new Tone.Player().toDestination();
 let mapedKeys = [];
 let audio = new Audio("src/tunes/a.wave");
 const playTune = (key) => {
-    audio.src= `src/tunes/${key}.wav`;
+    audio.src= `src/tunes/${key.toLowerCase()}.wav`;
     audio.play();
     
     const clickedKey = document.querySelector(`[data-key="${key.toLowerCase()}"]`)
