@@ -9,7 +9,7 @@ const player = new Tone.Player().toDestination();
 let mapedKeys = [];
 let audio = new Audio("src/tunes/a.wave");
 const playTune = (key) => {
-    audio.src= `src/tunes/${key.toLowerCase()}.wav`;
+    audio.src= `src/tunes/${key}.wav`;
     audio.play();
     
     const clickedKey = document.querySelector(`[data-key="${key.toLowerCase()}"]`)
@@ -136,11 +136,13 @@ const playSequentialNotes = (notes,time) => {
 
 const playMusic1 = () => {
     const notas = ["A", "A", "S", "A","F", "D"," ","A","A","S","A","G","F","F","H","H","K","H","F","D","S"," ","U","U", "H","F","G","F","F" ]; // Notas da música
-    playSequentialNotes(notas, 650); // Reproduzir as notas sequencialmente
+    let listaMinuscula = notas.map(item => item.toLowerCase());
+    playSequentialNotes(listaMinuscula, 650); // Reproduzir as notas sequencialmente
 };
 const playMusic2 = () => {
     const notas = ["A", "A", "G", "G","H", "H","G","G","F","F","D","D","S","S","A","A","G","G","F","F","D","D","S", "S","G","G","F","F","D","D","S","S","A","A","G","G","H","H","G","G","F","F","D","D","S","S","A","A" ]; // Notas da música
-    playSequentialNotes(notas, 650); // Reproduzir as notas sequencialmente
+    let listaMinuscula = notas.map(item => item.toLowerCase());
+    playSequentialNotes(listaMinuscula, 650); // Reproduzir as notas sequencialmente
 };
 
 volumeSlider.addEventListener("input", handleVolume);
