@@ -1,4 +1,4 @@
-body{
+body {
 
     display: flex;
     align-items: center;
@@ -10,36 +10,37 @@ body{
 
 }
 
-.container{
+.container {
 
     width: 780px;
     border-radius: 20px;
     padding: 35px 40px;
     background-color: black;
-    
+
 }
 
-.agrupar{
+.agrupar {
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0;
 
 }
 
-.exemplos{
- 
+.exemplos {
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 15px;
-    
+
 }
 
 .container header {
 
     color: #b2b2b2;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 
@@ -48,7 +49,7 @@ body{
 header h2 {
 
     font-size: 1.6rem;
-    
+
 }
 
 header .column {
@@ -59,7 +60,7 @@ header .column {
 
 }
 
-header .column span{
+header .column span {
 
     font-weight: 500;
     margin-right: 15px;
@@ -74,14 +75,14 @@ header .column span{
 }
 
 .notes-check input,
-.keys-check input{
+.keys-check input {
 
-    width:60px;
+    width: 60px;
     height: 30px;
     appearance: none;
     border-radius: 30px;
     background-color: #4b4b4b;
-    cursor:pointer;
+    cursor: pointer;
     position: relative;
 
 }
@@ -89,27 +90,27 @@ header .column span{
 .notes-check input::before,
 .keys-check input::before {
 
-    content:"";
+    content: "";
     height: 20px;
     width: 20px;
     background-color: #8c8c8c;
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 0.3rem;
     border-radius: inherit;
     transform: translateY(-50%);
     transition: all 0.3s ease;
-    
+
 
 }
 
 .notes-check input:checked::before,
-.keys-check input:checked::before{
+.keys-check input:checked::before {
 
     left: 2.1rem;
     background-color: #fff;
-    
-} 
+
+}
 
 
 .piano-keys {
@@ -151,7 +152,7 @@ header .column span{
     width: 100%;
     text-align: center;
     font-size: 1.13rem;
-    
+
 }
 
 
@@ -165,27 +166,66 @@ header .column span{
     background: linear-gradient(#222 20%, #000 50%, #111 80%);
 }
 
-.piano-keys .key.hide span{
-    display:none;
-}
-.column {
-    display: inline-block;
-    margin-right: 10px; /* Espaçamento entre os botões */
+.piano-keys .key.hide span {
+    display: none;
 }
 
-.ex1, .ex2 {
+.column {
+    display: inline-block;
+    margin-right: 10px;
+    /* Espaçamento entre os botões */
+}
+
+.ex1,
+.ex2 {
     padding: 10px 20px;
     border-radius: 20px;
-    background-color: #808381; /* Cor de fundo */
-    color: white; /* Cor do texto */
+    background-color: #808381;
+    /* Cor de fundo */
+    color: white;
+    /* Cor do texto */
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra para efeito 3D */
-    transition: box-shadow 0.3s ease; /* Transição suave da sombra */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    /* Sombra para efeito 3D */
+    transition: box-shadow 0.3s ease;
+    /* Transição suave da sombra */
 }
 
-.ex1:hover, .ex2:hover {
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Aumenta a sombra ao passar o mouse */
+.ex1:hover,
+.ex2:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    /* Aumenta a sombra ao passar o mouse */
+}
+
+
+@media screen and (max-height: 600px) {
+
+    .container {
+
+        width: 100vw;
+        height: 100vh;
+        padding: 15px;
+    }
+
+    header {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .piano-keys{
+
+        margin-top: 20px;
+    }
+    .piano-keys .white {
+
+        width: 9vw;
+        height: 60vh;
+    }
+
+
 }
