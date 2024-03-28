@@ -217,14 +217,26 @@ header .column span {
         justify-content: center;
 
     }
-    .piano-keys{
+
+    h2 {
+
+        font-size: 1.25rem;
+    }
+
+    .piano-keys {
 
         margin-top: 20px;
     }
+
     .piano-keys .white {
 
         width: 9vw;
-        height: 60vh;
+        height: 55vh;
+    }
+
+    .ex1,
+    .ex2 {
+        padding: 5px 10px;
     }
 
 
